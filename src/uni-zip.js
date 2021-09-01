@@ -6,7 +6,6 @@ module.exports = function UniZip(inputFile, outFile = '') {
 
   // inputFile has .gz on end:, true gunzip, false gzip.
   const isGunzip = /\.gz$/g.test(inputFile)
-  console.log(isGunzip)
   const uniZip = isGunzip ? zlib.createGunzip : zlib.createGzip
   const output = outFile
     ? outFile
